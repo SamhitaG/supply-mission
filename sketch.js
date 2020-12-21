@@ -55,10 +55,15 @@ function draw() {
   rectMode(CENTER);
   background(0);
   packageSprite.x= packageBody.position.x 
-  packageSprite.y= packageBody.position.y 
-  
+  packageSprite.y= packageBody.position.y   
   keyPressed();
   drawSprites();
+
+  if(packageBody.position.y>640){
+	packageBody.position.y=640
+	Matter.Body.setStatic(packageBody,true)  
+	packageBody.velocityY=0
+  }
  
 }
 
@@ -68,7 +73,3 @@ function keyPressed() {
 	  Matter.Body.setStatic(packageBody,false);}
     
   }
-
-
-
-
