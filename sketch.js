@@ -45,7 +45,7 @@ function setup() {
 
 	Engine.run(engine);
 	var package_option={
-		restitution:1.0
+		restitution:0.8
 	  }
   
 }
